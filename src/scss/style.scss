@@ -1,0 +1,1447 @@
+$bg-grey: #EFEFEF;
+$main-fs: 14px;
+
+%d-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+%d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+%phone {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  align-self: center;
+  margin-right: 40px;
+}
+
+%cb-btn {
+  font-weight: 400;
+  font-size: $main-fs;
+  line-height: 16px;
+  color: #000000;
+  background: #FFFFFF;
+  border: 2px solid #66C05D;
+  border-radius: 40px;
+  width: 170px;
+  height: 40px;
+  align-self: center;
+}
+
+
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.top-line {
+  background: $bg-grey;
+
+		// .top-line__menu
+
+		&__menu {
+      padding: 16px 0 17px 0;
+		}
+
+		// .top-line__list
+
+		&__list {
+      @extend %d-flex-row;
+      flex-wrap: nowrap;
+      justify-content: center;
+		}
+
+    &__link {
+      margin-right: 30px;
+      color: #333333;
+      font-size: $main-fs;
+      line-height: 16,41px;
+    }
+    &__link:last-child {
+      margin-right: 0;
+    }
+}
+
+.second-line {
+  @extend %d-flex-col;
+  padding: 20px 0 30px 0;
+
+  &__top {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $bg-grey;
+    margin-bottom: 30px;
+  }
+  // .second-line__presentation
+
+  &__presentation {
+    @extend %d-flex-row;
+    justify-content: space-between;
+  }
+
+  // .second-line__logo
+
+  &__logo {
+    @extend %d-flex-row;
+  }
+
+  &__img {
+    width: 80px;
+    margin-right: 20px;
+  }
+
+  &__firm-name {
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+    color: #66C05D;
+    align-self: center;
+  }
+
+  // .second-line__callback
+
+  &__callback {
+    @extend %d-flex-row;
+  }
+
+  // .second-line__phone
+
+  &__phone {
+    @extend %phone;
+  }
+
+  // .second-line__btn
+
+  &__btn {
+    @extend %cb-btn;
+  }
+
+  // .second-line__main-menu
+
+  &__main-menu {
+  }
+
+  // .second-line__list
+
+  &__list {
+    @extend %d-flex-row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  // .second-line__link
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-right: 40px;
+  }
+}
+
+.sale {
+  background: url("/images/bgsale.jpg");
+  background-size: cover;
+  padding: 192px 0;
+
+  // .sale__row
+
+  &__row {
+    @extend %d-flex-row;
+  }
+
+  // .sale__column
+
+  &__column {
+    width: 310px;
+  }
+
+  // .sale__text
+
+  &__heading {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+  }
+
+  &__text { 
+    font-weight: 400;
+    font-size: $main-fs;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+  }
+
+  // .sale__btn
+
+  &__btn {
+    background: #66C05D;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: $main-fs;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    padding: 12px 26px 13px 26px;
+  }
+}
+
+
+
+
+.goods {
+  padding: 80px 0 132px 0;
+  background: $bg-grey;
+
+  // .goods__header
+
+  &__header {
+    @extend %d-flex-row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    h2 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      align-self: center;
+    }
+    img {
+      width: 188.67px;
+      height: 60.75px;
+      margin-right: 35px;
+    }
+  }
+
+  // .goods__body
+
+  &__body {
+    margin-bottom: 80px;
+  }
+
+  // .goods__cards
+
+  &__cards {
+    @extend %d-flex-row;
+    justify-content: space-between;
+  }
+
+  // .goods__card
+
+  &__card {
+    background: #FFFFFF;
+    width: 255px;
+    padding: 25px 30px;
+    text-align: center;
+  }
+
+  // .goods__footer
+
+  &__footer {
+  }
+
+  // .goods__row
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.card {
+
+  // .card__img
+
+  &__img {  
+    width: 125px;
+    height: 166px;
+    margin-bottom: 20px;
+  }
+
+  // .card__text
+
+  &__text {
+    font-weight: 400;
+    font-size: $main-fs;
+    line-height: 20px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+
+  // .card__price
+
+  &__price {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  // .card__btn
+
+  &__btn {
+    background: #66C05D;
+    border: none;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: $main-fs;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    padding: 9px 40px;
+  }
+}
+.mail {
+  @extend %d-flex-row;
+  justify-content: space-between;
+  background: #66C05D;
+  padding: 35px 40px;
+  width: 595px;
+
+  // .mail__info
+
+  &__info {
+    width: 250px;
+  }
+
+  // .mail__title
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+  }
+
+  // .mail__text
+
+  &__text {
+    font-weight: 400;
+    font-size: $main-fs;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+  }
+
+  // .mail__input
+
+  &__input {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: $main-fs;
+    line-height: 16px;
+    color: #C4C4C4;
+    padding: 9px 25px;
+  }
+
+  // .mail__img
+
+  &__img {
+    width: 140px;
+    height: 106.54px;
+    align-self: center;
+  }
+}
+.map {
+  @extend %d-flex-col;
+  justify-content: space-between;
+  background: #66C05D;
+  padding: 35px 40px;
+  width: 595px;
+
+  // .map__title
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;  
+    color: #FFFFFF;
+    margin-bottom: 25px;
+  }
+
+  // .map__text
+
+  &__text {
+    font-weight: 400;
+    font-size: $main-fs;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+  }
+
+  // .map__btn
+
+  &__btn {
+    background: #66C05D;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 9px 28px;
+    width: 170px;
+    color: #FFFFFF;
+  }
+}
+
+
+.footer {
+
+		// .footer__top
+
+		&__top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 37px 0;
+		}
+
+		// .footer__icons
+
+		&__icons {
+      display: flex;
+      img {
+        display: block;
+        width: 45px;
+        height: 45px;
+        margin-right: 20px;
+      }
+      img:last-child {
+        margin-right: 0;
+      }
+		}
+
+		// .footer__address
+
+		&__address {
+      align-self: center;
+		}
+
+		// .footer__callback
+
+		&__callback {
+      display: flex;
+      flex-direction: row;
+		}
+
+		// .footer__phone
+
+    &__phone {
+      @extend %phone;
+    }
+  
+    // .footer__btn
+  
+    &__btn {
+      @extend %cb-btn;
+    }
+
+		// .footer__bottom
+
+		&__bottom {
+      background: $bg-grey;
+      padding: 25px 0;
+		}
+
+		// .footer__row
+
+		&__row {
+      @extend %d-flex-row;
+      justify-content: space-between;
+    }
+
+		// .footer__legacy
+
+		&__legacy {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #828282;
+      align-self: center;
+		}
+
+		// .footer__conf
+
+		&__conf {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: right;
+      color: #828282;
+      align-self: center;
+		}
+}
+
+// --------------------------------------------------------------------------------------------
+// ----------------------(min-width : 1024px) and (max-width : 1224px--------------------------
+// --------------------------------------------------------------------------------------------
+
+@media only screen and (min-width : 1024px) and (max-width : 1224px) {
+  /*--- Tablet landscape --- */
+  .container {
+    width: 980px;
+  }
+  .sale {
+    background-position: -500px;
+  }
+
+  .goods {  
+    &__header {
+      img {
+        width: 150px;
+        height: 45px;
+        margin-right: 35px;
+      }
+    }
+  }
+
+  .goods__card {
+    width: 220px;
+    padding: 15px 15px;
+  }
+
+  .mail, .map {
+    padding: 25px 30px;
+    width: 473px;
+  }
+}
+
+// --------------------------------------------------------------------------------------------
+// ----------------------(min-width : 800px) and (max-width : 1024px)--------------------------
+// --------------------------------------------------------------------------------------------
+
+@media only screen and (min-width : 800px) and (max-width : 1024px) {
+  /*--- Small tablet landscape ---*/
+  .container {
+    width: 750px;
+  }
+  .sale {
+    background-position: -600px;
+  }
+
+  .goods {  
+    &__header {
+      img {
+        width: 135px;
+        height: 35px;
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .goods__card {
+    width: 175px;
+    padding: 15px 15px;
+  }
+
+  .mail, .map {
+    padding: 20px 20px;
+    width: 368px;
+  }
+
+  .mail {
+    &__info {
+      width: 180px;
+    }
+  
+    // .mail__title
+  
+    &__title {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  
+    // .mail__text
+  
+    &__text {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+  
+    // .mail__input
+  
+    &__input {
+      width: 160px;
+    }
+  
+    // .mail__img
+  
+    &__img {
+      width: 112px;
+      height: 85px;
+    }
+  }
+
+  .map {
+    &__title {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  
+    // .map__text
+  
+    &__text {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer {
+
+		// .footer__top
+
+		&__top {
+      flex-direction: column;
+      margin: 20px 0;
+		}
+
+		// .footer__icons
+
+		&__icons {
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px 30px 0;
+      }
+		}
+
+    &__address {
+      align-self: start;
+      margin-bottom: 30px;
+		}
+ 
+    &__row {
+      flex-direction: column-reverse;
+    }
+  
+    // .footer__legacy
+  
+    &__legacy {
+      align-self: start;
+    }
+  
+    // .footer__conf
+  
+    &__conf {
+      align-self: start;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------------------------
+// ----------------------(min-width : 690px) and (max-width : 800px)---------------------------
+// --------------------------------------------------------------------------------------------
+
+@media only screen and (min-width : 690px) and (max-width : 800px) {
+  /*--- Tablet portrait ---*/
+
+  .container {
+    width: 640px;
+  }
+
+  .second-line {
+    padding: 20px 0 25px 0;
+  
+    &__img {
+      width: 50px;
+      margin-right: 15px;
+    }
+  
+    &__firm-name {
+      font-size: 30px;
+    }
+  
+    // .second-line__link
+  
+    &__link {
+      margin-right: 20px;
+    }
+  }
+
+  .sale {
+    background-position: -700px;
+
+    &__btn {
+        background: #fff;
+        border: 2px solid #66c05d;
+        color: #66c05d;
+        font-weight: 700;
+    }
+  }
+
+  .goods {
+    padding: 40px 0;
+
+    &__cards {
+      flex-wrap: wrap;
+    }
+
+    &__header {
+      img {
+        width: 135px;
+        height: 35px;
+        margin-right: 35px;
+      }
+    }
+
+    &__body {
+      margin-bottom: 30px;
+    }
+
+    &__card {
+      width: 300px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__row {
+      flex-direction: column;
+    }
+  }
+
+  .card__img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .mail, .map {
+    padding: 40px 30px;
+    width: 640px;
+  }
+
+  .mail {
+    margin-bottom: 30px;
+    &__info {
+      width: 280px;
+    }
+  
+    // .mail__title
+  
+    &__title {
+      font-size: 18px;
+    }
+  
+    // .mail__text
+  
+    &__text {
+      font-size: 16px;
+    }
+  
+    // .mail__input
+  
+    &__input {
+      width: 220px;
+      font-size: 16px;
+    }
+  
+    // .mail__img
+  
+    &__img {
+      width: 125px;
+      height: 95px;
+    }
+  }
+
+  .map {
+    &__title {
+      font-size: 18px;
+    }
+  
+    // .map__text
+  
+    &__text {
+      font-size: 16px;
+    }
+
+    &__btn {
+      width: 220px;
+      font-size: 16px;
+    }
+  }
+
+  .footer {
+
+		// .footer__top
+
+		&__top {
+      flex-direction: column;
+      margin: 20px 0;
+		}
+
+		// .footer__icons
+
+		&__icons {
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px 30px 0;
+      }
+		}
+
+    &__address {
+      align-self: start;
+      margin-bottom: 30px;
+		}
+
+    &__row {
+      flex-direction: column-reverse;
+    }
+  
+    // .footer__legacy
+  
+    &__legacy {
+      align-self: start;
+    }
+  
+    // .footer__conf
+  
+    &__conf {
+      align-self: start;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------------------------
+// ----------------------(min-width : 595px) and (max-width : 690px)---------------------------
+// --------------------------------------------------------------------------------------------
+
+@media only screen and (min-width : 595px) and (max-width : 690px) {
+  /*--- Small tablet portrait ---*/
+  .container {
+    width: 540px;
+  }
+
+  .second-line {
+    padding: 20px 0;
+  
+    &__img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+  
+    &__firm-name {
+      font-size: 28px;
+    }
+  
+    // .second-line__link
+  
+    &__link {
+      font-size: 12px;
+      margin-right: 15px;
+    }
+    &__link:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .sale {
+    background-position: -750px;
+
+    &__btn {
+        background: #fff;
+        border: 2px solid #66c05d;
+        color: #66c05d;
+        font-weight: 700;
+    }
+  }
+
+  .goods {
+    padding: 40px 0;
+
+    &__cards {
+      flex-wrap: wrap;
+    }
+
+    &__header {
+      h2 {
+        font-size: 18px;
+      }
+      img {
+        width: 120px;
+        height: 30px;
+        margin-right: 35px;
+      }
+    }
+
+    &__body {
+      margin-bottom: 30px;
+    }
+
+    &__card {
+      width: 250px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__row {
+      flex-direction: column;
+    }
+  }
+
+  .card__img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .mail, .map {
+    padding: 30px 30px;
+    width: 540px;
+  }
+
+  .mail {
+    margin-bottom: 30px;
+    &__info {
+      width: 280px;
+    }
+  
+    // .mail__title
+  
+    &__title {
+      font-size: 18px;
+    }
+  
+    // .mail__text
+  
+    &__text {
+      font-size: 16px;
+    }
+  
+    // .mail__input
+  
+    &__input {
+      width: 220px;
+      font-size: 16px;
+    }
+  
+    // .mail__img
+  
+    &__img {
+      width: 125px;
+      height: 95px;
+    }
+  }
+
+  .map {
+    &__title {
+      font-size: 18px;
+    }
+  
+    // .map__text
+  
+    &__text {
+      font-size: 16px;
+    }
+
+    &__btn {
+      width: 220px;
+      font-size: 16px;
+    }
+  }
+
+  .footer {
+
+		// .footer__top
+
+		&__top {
+      flex-direction: column;
+      margin: 20px 0;
+		}
+
+		// .footer__icons
+
+		&__icons {
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px 30px 0;
+      }
+		}
+
+    &__address {
+      align-self: start;
+      margin-bottom: 30px;
+		}
+
+    &__row {
+      flex-direction: column-reverse;
+    }
+  
+    // .footer__legacy
+  
+    &__legacy {
+      align-self: start;
+    }
+  
+    // .footer__conf
+  
+    &__conf {
+      align-self: start;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------------------------
+// ----------------------(min-width : 480px) and (max-width : 595px)---------------------------
+// --------------------------------------------------------------------------------------------
+
+@media only screen and (min-width : 480px) and (max-width : 595px) {
+  /*--- Mobile landscape ---*/
+  .container {
+    width: 450px;
+  }
+
+  .top-line {
+    &__link {
+      margin-right: 20px;
+    }
+  }
+
+  .second-line {
+    padding: 20px 0;
+
+    &__presentation {
+      flex-direction: column;
+    }
+
+    &__logo {
+      margin-bottom: 15px;
+    }
+
+    &__callback {
+      justify-content: space-between;
+    }
+  
+    &__img {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+    }
+  
+    &__firm-name {
+      font-size: 28px;
+    }
+  
+    // .second-line__link
+  
+    &__link {
+      font-size: 12px;
+      margin-right: 15px;
+    }
+    &__link:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .sale {
+    padding: 100px 0;
+    background-position: -500px;
+
+    &__heading {
+      font-size: 36px;
+    }
+
+    &__btn {
+        background: #fff;
+        border: 2px solid #66c05d;
+        color: #66c05d;
+        font-weight: 700;
+    }
+  }
+
+  .goods {
+    padding: 40px 0;
+
+    &__cards {
+      flex-wrap: wrap;
+    }
+
+    &__header {
+      h2 {
+        font-size: 16px;
+      }
+      img {
+        width: 120px;
+        height: 30px;
+        margin-right: 35px;
+      }
+    }
+
+    &__body {
+      margin-bottom: 30px;
+    }
+
+    &__card {
+      width: 215px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    &__row {
+      flex-direction: column;
+    }
+  }
+
+  .card__img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .mail, .map {
+    padding: 30px 30px;
+    width: 450px;
+  }
+
+  .mail {
+    margin-bottom: 30px;
+    &__info {
+      width: 220px;
+    }
+  
+    // .mail__title
+  
+    &__title {
+      font-size: 18px;
+    }
+  
+    // .mail__text
+  
+    &__text {
+      font-size: $main-fs;
+    }
+  
+    // .mail__input
+  
+    &__input {
+      width: 220px;
+      font-size: $main-fs;
+    }
+  
+    // .mail__img
+  
+    &__img {
+      width: 125px;
+      height: 95px;
+    }
+  }
+
+  .map {
+    &__title {
+      font-size: 18px;
+    }
+  
+    // .map__text
+  
+    &__text {
+      font-size: $main-fs;
+    }
+
+    &__btn {
+      width: 220px;
+      font-size: $main-fs;
+    }
+  }
+
+  .footer {
+
+		// .footer__top
+
+		&__top {
+      flex-direction: column;
+      margin: 20px 0;
+		}
+
+		// .footer__icons
+
+		&__icons {
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px 30px 0;
+      }
+		}
+
+    &__address {
+      align-self: start;
+      margin-bottom: 30px;
+		}
+
+    &__row {
+      flex-direction: column-reverse;
+    }
+  
+    // .footer__legacy
+  
+    &__legacy {
+      align-self: start;
+    }
+  
+    // .footer__conf
+  
+    &__conf {
+      align-self: start;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------------------------
+// ----------------------(min-width : 320px) and (max-width : 480px)---------------------------
+// --------------------------------------------------------------------------------------------
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  /*--- Mobile portrait ---*/
+  .container {
+    width: 310px;
+  }
+
+  .top-line {
+    &__link {
+      font-size: 12px;
+      margin-right: 15px;
+    }
+  }
+
+  .second-line {
+    padding: 15px 0;
+
+    &__top {
+      margin-bottom: 15px;
+    }
+
+    &__presentation {
+      flex-direction: column;
+    }
+
+    &__logo {
+      margin-bottom: 15px;
+      align-self: center;
+    }
+
+    &__callback {
+      flex-direction: column;
+    }
+  
+    &__img {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+    }
+  
+    &__firm-name {
+      font-size: 28px;
+    }
+  
+    // .second-line__link
+  
+    &__phone {
+      margin-right: 0;
+      margin-bottom: 15px;
+      align-self: center;
+    }
+
+    &__btn {
+      width: 177px;
+    }
+
+    &__link {
+      font-size: 8px;
+      margin-right: 8px;
+    }
+    &__link:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .sale {
+    padding: 70px 0;
+    background-position: -520px;
+
+    &__heading {
+      font-size: 30px;
+    }
+
+    &__btn {
+        background: #fff;
+        border: 2px solid #66c05d;
+        color: #66c05d;
+        font-weight: 700;
+    }
+  }
+
+  .goods {
+    padding: 20px 0;
+
+    &__cards {
+      flex-wrap: wrap;
+    }
+
+    &__header {
+      justify-content: center;
+      h2 {
+        font-size: 16px;
+      }
+      img {
+        display: none;
+      }
+    }
+
+    &__body {
+      margin-bottom: 0;
+    }
+
+    &__cards {
+      justify-content: center;
+    }
+
+    &__card {
+      width: 310px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    &__row {
+      flex-direction: column;
+    }
+  }
+
+  .card__img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .mail, .map {
+    padding: 15px;
+    width: 310px;
+  }
+
+  .mail {
+    flex-direction: column;
+    margin-bottom: 20px;
+    &__info {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    // .mail__title
+  
+    &__title {
+      font-size: 18px;
+    }
+  
+    // .mail__text
+  
+    &__text {
+      font-size: $main-fs;
+    }
+  
+    // .mail__input
+  
+    &__input {
+      width: 220px;
+      font-size: $main-fs;
+    }
+  
+    // .mail__img
+  
+    &__img {
+      width: 40px;
+      height: 30px;
+      align-self: start;
+    }
+  }
+
+  .map {
+    &__title {
+      font-size: 18px;
+    }
+  
+    // .map__text
+  
+    &__text {
+      font-size: $main-fs;
+    }
+
+    &__btn {
+      width: 220px;
+      font-size: $main-fs;
+    }
+  }
+
+  .footer {
+
+		// .footer__top
+
+		&__top {
+      flex-direction: column;
+      margin: 20px 0;
+		}
+
+		// .footer__icons
+
+		&__icons {
+      justify-content: center;
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px 20px 0;
+      }
+		}
+
+    &__address {
+      font-size: $main-fs;
+      margin-bottom: 20px;
+		}
+
+    &__callback {
+      flex-direction: column;
+    }
+
+    &__phone {
+      font-size: $main-fs;
+      margin-right: 0;
+      margin-bottom: 20px;
+		}
+
+    &__row {
+      flex-direction: column-reverse;
+    }
+  
+    // .footer__legacy
+  
+    &__legacy {
+      align-self: start;
+    }
+  
+    // .footer__conf
+  
+    &__conf {
+      align-self: start;
+      margin-bottom: 10px;
+    }
+  }
+}
